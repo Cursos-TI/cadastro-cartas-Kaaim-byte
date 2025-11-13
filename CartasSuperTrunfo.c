@@ -97,16 +97,57 @@ int main() {
     printf("A densidade populacional da Carta 2 e: %f\n", Densidade_Populacional2);
     printf("O Super poder da Carta 2 e: %f\n", Super_Poder2);
 
-    // ---- Comparações ----
-    printf("\nComparacao de Cartas:\n\n");
 
-    printf("Populacao: Carta 1 venceu (%d)\n", Populacao1 > Populacao2);
-    printf("Area: Carta 1 venceu (%d)\n", area1 > area2);
-    printf("PIB: Carta 1 venceu (%d)\n", PIB1 > PIB2);
-    printf("Pontos Turisticos: Carta 1 venceu (%d)\n", Numero_de_pontos_turisticos1 > Numero_de_pontos_turisticos2);
-    printf("Densidade Populacional: Carta 1 venceu (%d)\n", Densidade_Populacional1 < Densidade_Populacional2); // menor vence
-    printf("PIB per Capita: Carta 1 venceu (%d)\n", PIB_per_capita1 > PIB_per_capita2);
-    printf("Super Poder: Carta 1 venceu (%d)\n", Super_Poder1 > Super_Poder2);
+        // Inicio das comparacoes para determinar carta vencedora
+    printf("Vamos ver qual carta venceu?\n\n");
+    
+
+        // inicio dos codigos de comparacao
+    printf("Qual carta tem a maior populacao? \n");
+
+    if (Populacao1 > Populacao2){
+        printf("Carta 1 tem mais populacao! \n\n");
+    } else{
+        printf("Carta 2 tem mais populacao! \n\n");
+    }
+
+    printf("Qual carta tem a maior area? \n");
+
+    if(area1 > area2){
+        printf("Carta 1 tem mais Area! \n\n");
+    } else{
+        printf("Carta 2 tem mais Area! \n\n");
+    }
+
+    printf("Qual carta tem o maior PIB? \n");
+
+    if(PIB1 > PIB2){
+        printf("Carta 1 tem maior PIB \n\n");
+    } else{
+        printf("Carta 2 tem maior PIB \n\n");
+    }
+
+    printf("Qual carta tem a menor dencidade populacional? \n");
+
+    if (Densidade_Populacional1 < Densidade_Populacional2){
+        printf("Carta 1 tem a menor Densidade Populacional! \n\n");
+    } else{
+        printf("Carta 2 tem a menor Densidade populacional! \n\n");
+    }
+    
+    printf("Qual carta tem o melhor PIB per Capita? \n");
+
+    if (PIB_per_capita1 > PIB_per_capita2){
+        printf("Carta um tem o maior PIB per Capita! \n\n");
+    } else
+    {
+        printf("Carta 2 tem o meior PIB per Capira! \n\n");
+    }
+        // Fim dos codigos de comparacao
+        // Fim do codigo
+    
+
+
 
 
 

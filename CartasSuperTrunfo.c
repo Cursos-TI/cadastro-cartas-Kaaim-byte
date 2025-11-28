@@ -1,6 +1,7 @@
 #include <stdio.h>
 
 int main() {
+    int opcaojogador;
     // Variáveis da Carta 1
     char Estado1;
     char Codigo_da_Carta1[20];
@@ -101,48 +102,88 @@ int main() {
         // Inicio das comparacoes para determinar carta vencedora
     printf("Vamos ver qual carta venceu?\n\n");
     
+    printf("Escolha qual trunfo vc deseja usar:  \n");
+    printf("1. Eu desejo usar populacao! \n");
+    printf("2. Eu desejo usar Area! \n");
+    printf("3. Eu desejo usar PIB! \n");
+    printf("4. Eu desejo usar Densidade Populacional! \n");
+    printf("5. Eu desejo usar PIB per Capita! \n");
+    scanf("%d", &opcaojogador);
 
-        // inicio dos codigos de comparacao
-    printf("Qual carta tem a maior populacao? \n");
+
+    switch (opcaojogador)
+    {
+    case 1:
+        printf("Qual carta tem a maior populacao? \n");
+        printf("Carta 1: %s / carta 2: %s\n", Nome_da_Cidade1, Nome_da_Cidade2);
+        printf("carta 1: %i / carta 2: %i\n", Populacao1, Populacao2);
 
     if (Populacao1 > Populacao2){
         printf("Carta 1 tem mais populacao! \n\n");
-    } else{
+    } else if (Populacao1 < Populacao2) {
         printf("Carta 2 tem mais populacao! \n\n");
+    }else{
+        printf("Ambas as cartas tem a mesma populacao! \n\n");
     }
-
+        break;
+    case 2:
     printf("Qual carta tem a maior area? \n");
+    printf("Carta 1: %s / carta 2: %s\n", Nome_da_Cidade1, Nome_da_Cidade2);
+    printf("carta 1: %f / carta 2: %f\n", area1, area2);
 
     if(area1 > area2){
         printf("Carta 1 tem mais Area! \n\n");
-    } else{
+    } else if (area1 < area2) {
         printf("Carta 2 tem mais Area! \n\n");
+    } else {
+        printf("Ambas as cartas tem a mesma Area! \n\n");
     }
-
+        break;
+    case 3:
     printf("Qual carta tem o maior PIB? \n");
+    printf("Carta 1: %s / carta 2: %s\n", Nome_da_Cidade1, Nome_da_Cidade2);
+    printf("carta 1: %f / carta 2: %f\n", PIB1, PIB2);
 
     if(PIB1 > PIB2){
         printf("Carta 1 tem maior PIB \n\n");
-    } else{
+    } else if (PIB1 < PIB2) { 
         printf("Carta 2 tem maior PIB \n\n");
-    }
-
+    }else{
+        printf("Ambas as cartas tem o mesmo PIB! \n\n");
+    } break;
+    case 4:
     printf("Qual carta tem a menor dencidade populacional? \n");
+    printf("Carta 1: %s / carta 2: %s\n", Nome_da_Cidade1, Nome_da_Cidade2);
+    printf("carta 1: %f / carta 2: %f\n", Densidade_Populacional1, Densidade_Populacional2);
+
 
     if (Densidade_Populacional1 < Densidade_Populacional2){
         printf("Carta 1 tem a menor Densidade Populacional! \n\n");
-    } else{
+    } else if (Densidade_Populacional1 > Densidade_Populacional2) {
         printf("Carta 2 tem a menor Densidade populacional! \n\n");
-    }
-    
+    } else{
+        printf("Ambas as cartas tem a mesma Densidade Populacional! \n\n");
+    } break;
+    case 5:
     printf("Qual carta tem o melhor PIB per Capita? \n");
+    printf("Carta 1: %s / carta 2: %s\n", Nome_da_Cidade1, Nome_da_Cidade2);
+    printf("carta 1: %f / carta 2: %f\n", PIB_per_capita1, PIB_per_capita2);
+    
 
     if (PIB_per_capita1 > PIB_per_capita2){
         printf("Carta um tem o maior PIB per Capita! \n\n");
-    } else
-    {
-        printf("Carta 2 tem o meior PIB per Capira! \n\n");
+    } else if (PIB_per_capita1 < PIB_per_capita2) {
+        printf("Carta 2 tem o meior PIB per Capita! \n\n");
+    } else{
+        printf("Ambas as cartas tem o mesmo PIB per Capita! \n\n");
+    } break;
+
+    default:
+        printf("Informacao invalida!");
+        break;
     }
+       
+    
         // Fim dos codigos de comparacao
         // Fim do codigo
     
